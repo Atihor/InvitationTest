@@ -20,7 +20,7 @@ body {
 
 /* ======================================================
    INVITATION PAGE
-   The page dimensions are controlled by the image.
+   The background image controls the page dimensions.
 ====================================================== */
 
 .invitation-page {
@@ -43,9 +43,7 @@ body {
     user-select: none;
     pointer-events: none;
 }
-/* ======================================================
-   ANIMATED GANPATI
-====================================================== */
+
 
 /* ======================================================
    ANIMATED GANPATI
@@ -53,21 +51,20 @@ body {
 
 .opening-ganpati {
     position: absolute;
+    top: 5.5%;
+    left: 50%;
 
-    /* Position */
-    top: 6%;
-    left: 45%;
-    transform: translateX(-50%);
-
-    /* Size */
-    width: clamp(240px, 18vw, 340px);
-
+    width: clamp(260px, 22vw, 430px);
     margin: 0;
+
+    transform: translateX(-50%);
     z-index: 10;
 }
+
 .opening-ganpati-image {
     display: block;
-    width: 850px;
+
+    width: 100%;
     height: auto;
 
     transform-origin: center bottom;
@@ -93,22 +90,12 @@ body {
 
 
 /* ======================================================
-   REDUCED MOTION ACCESSIBILITY
-====================================================== */
-
-@media (prefers-reduced-motion: reduce) {
-    .opening-ganpati-image {
-        animation: none;
-    }
-}
-
-/* ======================================================
    MARATHI INVOCATION
 ====================================================== */
 
 .opening-invocation {
     position: absolute;
-    top: 16%;
+    top: 16.5%;
     left: 50%;
 
     width: max-content;
@@ -118,7 +105,7 @@ body {
     color: #8b2e4b;
 
     font-family: "Noto Serif Devanagari", serif;
-    font-size: 2.5vw;
+    font-size: clamp(1.8rem, 2.5vw, 3.2rem);
     font-weight: 600;
     line-height: 1.4;
     text-align: center;
@@ -135,7 +122,7 @@ body {
 
 
 /* ======================================================
-   INVOCATION REVEAL ANIMATION
+   INVOCATION ANIMATIONS
 ====================================================== */
 
 @keyframes invocation-reveal {
@@ -150,21 +137,210 @@ body {
     }
 }
 
-
-/* ======================================================
-   INVOCATION SOFT GLOW
-====================================================== */
-
 @keyframes invocation-glow {
     0%,
     100% {
-        text-shadow:
-            0 0 0 rgba(201, 154, 46, 0);
+        text-shadow: 0 0 0 rgba(201, 154, 46, 0);
     }
 
     50% {
-        text-shadow:
-            0 0 10px rgba(201, 154, 46, 0.35);
+        text-shadow: 0 0 10px rgba(201, 154, 46, 0.35);
+    }
+}
+
+
+/* ======================================================
+   INVITATION INTRODUCTION
+====================================================== */
+
+.opening-header {
+    position: absolute;
+    top: 20.5%;
+    left: 50%;
+
+    width: min(82%, 1000px);
+    margin: 0;
+
+    text-align: center;
+
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+
+/* Supporting invitation text */
+.opening-invitation-text {
+    margin: 0 0 0.15em;
+
+    color: #5b4036;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(1.35rem, 2.1vw, 2.6rem);
+    font-weight: 600;
+    line-height: 1.2;
+
+    opacity: 0;
+    transform: translateY(14px);
+
+    animation: opening-text-reveal 1s ease-out 0.9s forwards;
+}
+
+
+/* Main ceremony heading */
+.opening-title {
+    margin: 0;
+
+    color: #a93455;
+
+    font-family: "Great Vibes", cursive;
+    font-size: clamp(3.5rem, 6vw, 7rem);
+    font-weight: 400;
+    line-height: 1.05;
+
+    opacity: 0;
+    transform: translateY(18px) scale(0.97);
+
+    animation: opening-title-reveal 1.2s ease-out 1.15s forwards;
+}
+
+
+/* ======================================================
+   DECORATIVE DIVIDER
+====================================================== */
+
+.opening-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: min(70%, 520px);
+    margin: 0.35rem auto 0;
+
+    color: #c7962d;
+
+    opacity: 0;
+    transform: scaleX(0.6);
+
+    animation: opening-divider-reveal 0.9s ease-out 1.55s forwards;
+}
+
+.opening-divider-line {
+    width: 42%;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            #c7962d
+        );
+}
+
+.opening-divider-line:last-child {
+    background:
+        linear-gradient(
+            to left,
+            transparent,
+            #c7962d
+        );
+}
+
+.opening-divider-symbol {
+    margin: 0 0.6rem;
+
+    font-size: clamp(1.4rem, 2vw, 2rem);
+    line-height: 1;
+
+    animation: divider-symbol-pulse 3s ease-in-out 2.4s infinite;
+}
+
+
+/* ======================================================
+   INTRODUCTION ANIMATIONS
+====================================================== */
+
+@keyframes opening-text-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes opening-title-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes opening-divider-reveal {
+    from {
+        opacity: 0;
+        transform: scaleX(0.6);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes divider-symbol-pulse {
+    0%,
+    100% {
+        transform: scale(1);
+        text-shadow: 0 0 0 rgba(199, 150, 45, 0);
+    }
+
+    50% {
+        transform: scale(1.08);
+        text-shadow: 0 0 10px rgba(199, 150, 45, 0.4);
+    }
+}
+
+
+/* ======================================================
+   MOBILE ADJUSTMENTS
+====================================================== */
+
+@media (max-width: 768px) {
+    .opening-ganpati {
+        top: 4.5%;
+        width: clamp(145px, 38vw, 220px);
+    }
+
+    .opening-invocation {
+        top: 15%;
+        max-width: 90%;
+
+        font-size: clamp(1rem, 4vw, 1.4rem);
+    }
+
+    .opening-header {
+        top: 19%;
+        width: 90%;
+    }
+
+    .opening-invitation-text {
+        font-size: clamp(1rem, 4vw, 1.35rem);
+    }
+
+    .opening-title {
+        font-size: clamp(2.5rem, 10vw, 4rem);
+    }
+
+    .opening-divider {
+        width: 72%;
     }
 }
 
@@ -173,8 +349,30 @@ body {
    REDUCED MOTION ACCESSIBILITY
 ====================================================== */
 
-@media (max-width: 768px) {
+@media (prefers-reduced-motion: reduce) {
+    .opening-ganpati-image,
+    .opening-invocation,
+    .opening-invitation-text,
+    .opening-title,
+    .opening-divider,
+    .opening-divider-symbol {
+        animation: none;
+    }
+
+    .opening-invocation,
+    .opening-invitation-text,
+    .opening-title,
+    .opening-divider {
+        opacity: 1;
+    }
+
     .opening-invocation {
-        font-size: 1.35rem;
+        transform: translate(-50%, 0);
+    }
+
+    .opening-invitation-text,
+    .opening-title,
+    .opening-divider {
+        transform: none;
     }
 }
