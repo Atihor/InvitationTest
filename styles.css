@@ -1,0 +1,180 @@
+/* ======================================================
+   GLOBAL RESET
+====================================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #f8d9d4;
+}
+
+
+/* ======================================================
+   INVITATION PAGE
+   The page dimensions are controlled by the image.
+====================================================== */
+
+.invitation-page {
+    position: relative;
+    width: 100%;
+}
+
+
+/* ======================================================
+   INVITATION BACKGROUND
+   Preserve the original image aspect ratio.
+====================================================== */
+
+.invitation-background {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    user-select: none;
+    pointer-events: none;
+}
+/* ======================================================
+   ANIMATED GANPATI
+====================================================== */
+
+/* ======================================================
+   ANIMATED GANPATI
+====================================================== */
+
+.opening-ganpati {
+    position: absolute;
+
+    /* Position */
+    top: 6%;
+    left: 45%;
+    transform: translateX(-50%);
+
+    /* Size */
+    width: clamp(240px, 18vw, 340px);
+
+    margin: 0;
+    z-index: 10;
+}
+.opening-ganpati-image {
+    display: block;
+    width: 850px;
+    height: auto;
+
+    transform-origin: center bottom;
+
+    animation: ganpati-float 4s ease-in-out infinite;
+}
+
+
+/* ======================================================
+   GANPATI FLOATING ANIMATION
+====================================================== */
+
+@keyframes ganpati-float {
+    0%,
+    100% {
+        transform: translateY(0) rotate(-1deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(1deg);
+    }
+}
+
+
+/* ======================================================
+   REDUCED MOTION ACCESSIBILITY
+====================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .opening-ganpati-image {
+        animation: none;
+    }
+}
+
+/* ======================================================
+   MARATHI INVOCATION
+====================================================== */
+
+.opening-invocation {
+    position: absolute;
+    top: 16%;
+    left: 50%;
+
+    width: max-content;
+    max-width: 85%;
+    margin: 0;
+
+    color: #8b2e4b;
+
+    font-family: "Noto Serif Devanagari", serif;
+    font-size: 2.5vw;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+
+    opacity: 0;
+    transform: translate(-50%, 14px);
+
+    z-index: 10;
+
+    animation:
+        invocation-reveal 1.1s ease-out 0.5s forwards,
+        invocation-glow 3.5s ease-in-out 1.6s infinite;
+}
+
+
+/* ======================================================
+   INVOCATION REVEAL ANIMATION
+====================================================== */
+
+@keyframes invocation-reveal {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 14px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+
+/* ======================================================
+   INVOCATION SOFT GLOW
+====================================================== */
+
+@keyframes invocation-glow {
+    0%,
+    100% {
+        text-shadow:
+            0 0 0 rgba(201, 154, 46, 0);
+    }
+
+    50% {
+        text-shadow:
+            0 0 10px rgba(201, 154, 46, 0.35);
+    }
+}
+
+
+/* ======================================================
+   REDUCED MOTION ACCESSIBILITY
+====================================================== */
+
+@media (max-width: 768px) {
+    .opening-invocation {
+        font-size: 1.35rem;
+    }
+}
