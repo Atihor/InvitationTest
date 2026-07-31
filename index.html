@@ -1,20 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
->
 
-<link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
->
-
-<link
-    href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@500;600;700&display=swap"
-    rel="stylesheet"
->
 <head>
     <meta charset="UTF-8">
 
@@ -25,8 +11,29 @@
 
     <title>Nilesh &amp; Radhika | Engagement Invitation</title>
 
+    <!-- Improve Google Fonts connection performance -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <!-- Invitation fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Great+Vibes&family=Noto+Serif+Devanagari:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
     <!-- Main stylesheet -->
-    <link rel="stylesheet" href="styles.css">
+    <link
+        rel="stylesheet"
+        href="styles.css"
+    >
 </head>
 
 <body>
@@ -34,7 +41,6 @@
     <!-- ======================================================
          INVITATION PAGE
          The background image controls the page dimensions.
-         Future sections will be positioned relative to it.
     ======================================================= -->
     <main class="invitation-page">
 
@@ -53,10 +59,69 @@
                 alt="Lord Ganpati"
             >
         </figure>
+
         <!-- Traditional Marathi invocation -->
-        <p class="opening-invocation" lang="mr">
+        <p
+            class="opening-invocation"
+            lang="mr"
+        >
             ॥ श्री गणेशाय नमः ॥
         </p>
+
+        <!-- Invitation introduction -->
+        <header class="opening-header">
+
+            <p class="opening-invitation-text">
+                We cordially invite you to the
+            </p>
+
+            <h1 class="opening-title">
+                Engagement Ceremony of
+            </h1>
+
+            <!-- Decorative heart ribbon -->
+            <figure class="opening-ribbon">
+                <img
+                    class="opening-ribbon-image"
+                    src="assets/ribbon.png"
+                    alt=""
+                    aria-hidden="true"
+                >
+            </figure>
+
+        </header>
+
+        <!-- Couple names and engagement rings -->
+        <div class="opening-couple">
+
+            <p class="opening-name opening-name--groom">
+                Nilesh
+            </p>
+
+            <figure class="opening-rings">
+                <img
+                    class="opening-rings-image"
+                    src="assets/rings.png"
+                    alt="Two golden engagement rings"
+                >
+            </figure>
+
+            <p class="opening-name opening-name--bride">
+                Radhika
+            </p>
+
+        </div>
+        <!-- ======================================================
+            COUPLE PORTRAIT
+            Transparent couple cutout positioned over the invitation.
+        ======================================================= -->
+        <figure class="couple-portrait">
+            <img
+                class="couple-portrait-image"
+                src="assets/couple.png"
+                alt="Nilesh and Radhika"
+            >
+        </figure>
 
     </main>
 
