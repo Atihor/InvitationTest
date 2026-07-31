@@ -46,15 +46,16 @@ body {
 
 
 /* ======================================================
-   ANIMATED GANPATI
+   SECTION 1: OPENING
+   Ganpati, invocation, invitation text, names and rings.
 ====================================================== */
 
 .opening-ganpati {
     position: absolute;
-    top: 5.5%;
+    top: 3.5%;
     left: 50%;
 
-    width: clamp(260px, 22vw, 430px);
+    width: clamp(240px, 20vw, 390px);
     margin: 0;
 
     transform: translateX(-50%);
@@ -73,10 +74,208 @@ body {
 }
 
 
+/* Traditional Marathi invocation */
+.opening-invocation {
+    position: absolute;
+    top: 11.8%;
+    left: 50%;
+
+    width: max-content;
+    max-width: 85%;
+    margin: 0;
+
+    color: #8b2e4b;
+
+    font-family: "Noto Serif Devanagari", serif;
+    font-size: clamp(1.7rem, 2.4vw, 3rem);
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: center;
+
+    opacity: 0;
+    transform: translate(-50%, 14px);
+
+    z-index: 10;
+
+    animation:
+        invocation-reveal 0.8s ease-out 0.8s forwards,
+        invocation-glow 3.5s ease-in-out 2s infinite;
+}
+
+
+/* Invitation heading block */
+.opening-header {
+    position: absolute;
+    top: 14.4%;
+    left: 50%;
+
+    width: min(84%, 1000px);
+    margin: 0;
+
+    text-align: center;
+
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.opening-invitation-text {
+    margin: 0 0 0.1em;
+
+    color: #5b4036;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(1.3rem, 2vw, 2.5rem);
+    font-weight: 600;
+    line-height: 1.2;
+
+    animation:
+        opening-text-reveal 0.8s ease-out 1.7s both;
+}
+
+.opening-title {
+    margin: 0;
+
+    color: #a93455;
+
+    font-family: "Great Vibes", cursive;
+    font-size: clamp(3.4rem, 5.8vw, 6.8rem);
+    font-weight: 400;
+    line-height: 1;
+
+    animation:
+        opening-title-reveal 0.9s ease-out 2.3s both;
+}
+
+
+/* Decorative ribbon */
+.opening-ribbon {
+    width: min(56%, 470px);
+    margin: 0.25rem auto 0;
+}
+
+.opening-ribbon-image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    opacity: 0;
+    transform: scaleX(0.75);
+
+    animation:
+        ribbon-reveal 0.7s ease-out 3s both;
+}
+
+
+/* Couple names and rings */
+.opening-couple {
+    position: absolute;
+    top: 21%;
+    left: 50%;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    column-gap: clamp(0.8rem, 2.4vw, 2.4rem);
+
+    width: min(86%, 1150px);
+
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.opening-name {
+    margin: 0;
+
+    color: #a93455;
+
+    font-family: "Great Vibes", cursive;
+    font-size: clamp(3.8rem, 7vw, 7.5rem);
+    font-weight: 400;
+    line-height: 1;
+
+    opacity: 0;
+}
+
+.opening-name--groom {
+    text-align: right;
+    transform: translateX(-30px);
+
+    animation:
+        groom-name-reveal 0.9s ease-out 3.6s both;
+}
+
+.opening-name--bride {
+    text-align: left;
+    transform: translateX(30px);
+
+    animation:
+        bride-name-reveal 0.9s ease-out 3.6s both;
+}
+
+.opening-rings {
+    width: clamp(85px, 8vw, 140px);
+    margin: 0;
+
+    opacity: 0;
+
+    animation:
+        rings-reveal 0.8s ease-out 4.1s both;
+}
+
+.opening-rings-image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    transform-origin: center;
+
+    animation:
+        rings-float 4s ease-in-out 4.9s infinite;
+}
+
+
 /* ======================================================
-   GANPATI FLOATING ANIMATION
+   SECTION 2: COUPLE PORTRAIT
 ====================================================== */
 
+.couple-portrait {
+    position: absolute;
+    top: 26%;
+    left: 50%;
+
+    width: clamp(430px, 58vw, 1000px);
+    margin: 0;
+
+    opacity: 0;
+    transform: translate(-50%, 28px) scale(0.96);
+
+    z-index: 10;
+
+    animation:
+        couple-portrait-reveal 1.2s ease-out 4.8s both;
+}
+
+.couple-portrait-image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    transform-origin: center bottom;
+
+    filter:
+        drop-shadow(0 0 12px rgba(255, 224, 156, 0.45))
+        drop-shadow(0 0 28px rgba(201, 154, 46, 0.28))
+        drop-shadow(0 16px 18px rgba(91, 64, 54, 0.16));
+
+    animation:
+        couple-portrait-float 5s ease-in-out 6s infinite,
+        couple-portrait-glow 4s ease-in-out 6s infinite;
+}
+
+/* Key Frames */
 @keyframes ganpati-float {
     0%,
     100% {
@@ -88,42 +287,6 @@ body {
     }
 }
 
-
-/* ======================================================
-   MARATHI INVOCATION
-====================================================== */
-
-.opening-invocation {
-    position: absolute;
-    top: 16.5%;
-    left: 50%;
-
-    width: max-content;
-    max-width: 85%;
-    margin: 0;
-
-    color: #8b2e4b;
-
-    font-family: "Noto Serif Devanagari", serif;
-    font-size: clamp(1.8rem, 2.5vw, 3.2rem);
-    font-weight: 600;
-    line-height: 1.4;
-    text-align: center;
-
-    opacity: 0;
-    transform: translate(-50%, 14px);
-
-    z-index: 10;
-
-    animation:
-    invocation-reveal 0.8s ease-out 0.8s forwards,
-    invocation-glow 3.5s ease-in-out 2s infinite;
-}
-
-
-/* ======================================================
-   INVOCATION ANIMATIONS
-====================================================== */
 
 @keyframes invocation-reveal {
     from {
@@ -148,65 +311,808 @@ body {
     }
 }
 
+@keyframes ribbon-reveal {
+    from {
+        opacity: 0;
+        transform: scaleX(0.75);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes groom-name-reveal {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bride-name-reveal {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes rings-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(14px) scale(0.92);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes rings-float {
+    0%,
+    100% {
+        transform: translateY(0) rotate(-1deg);
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(1deg);
+    }
+}
+
+
+@keyframes couple-portrait-reveal {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 28px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0) scale(1);
+    }
+}
+
+@keyframes couple-portrait-float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+@keyframes couple-portrait-glow {
+    0%,
+    100% {
+        filter:
+            drop-shadow(0 0 10px rgba(255, 224, 156, 0.38))
+            drop-shadow(0 0 24px rgba(201, 154, 46, 0.22))
+            drop-shadow(0 16px 18px rgba(91, 64, 54, 0.16));
+    }
+
+    50% {
+        filter:
+            drop-shadow(0 0 18px rgba(255, 224, 156, 0.58))
+            drop-shadow(0 0 38px rgba(201, 154, 46, 0.38))
+            drop-shadow(0 18px 22px rgba(91, 64, 54, 0.18));
+    }
+}
 
 /* ======================================================
-   INVITATION INTRODUCTION
+   SECTION 3 : EVENT INFORMATION
 ====================================================== */
 
-.opening-header {
+.event-information {
     position: absolute;
-    top: 20.5%;
+    top: 45%;
     left: 50%;
 
-    width: min(82%, 1000px);
-    margin: 0;
-
-    text-align: center;
+    width: min(86%, 1050px);
 
     transform: translateX(-50%);
     z-index: 10;
 }
 
+.event-information-ribbon {
+    width: min(40%, 300px);
 
-/* Supporting invitation text */
-.opening-invitation-text {
-    margin: 0 0 0.15em;
+    margin: 0 auto 1.2rem;
+}
 
-    color: #5b4036;
+.event-information-ribbon-image {
+    display: block;
+    width: 100%;
+}
 
-    font-family: "Cormorant Garamond", serif;
-    font-size: clamp(1.35rem, 2.1vw, 2.6rem);
-    font-weight: 600;
-    line-height: 1.2;
-    text-align: center;
+.event-information-panel {
 
-    opacity: 1;
-    transform: translateY(0);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 
-    animation:
-        opening-text-reveal 0.8s ease-out 1.7s both;
+    padding: 1.4rem 2rem;
+
+    background: rgba(255,255,255,.28);
+
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(212,174,79,.35);
+
+    border-radius: 26px;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.08);
+}
+
+.event-information-item{
+
+    flex:1;
+
+    text-align:center;
+}
+
+.event-information-icon{
+
+    width:38px;
+    height:38px;
+
+    color:#c7952f;
+
+    margin-bottom:.5rem;
+}
+
+.event-information-heading{
+
+    margin:0;
+
+    color:#5b4036;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:2rem;
+    font-weight:600;
+}
+
+.event-information-description{
+
+    margin-top:.3rem;
+
+    color:#8b2e4b;
+
+    font-size:1.15rem;
+}
+
+.event-information-separator{
+
+    color:#c7952f;
+
+    font-size:1.2rem;
+
+    margin:0 1rem;
 }
 
 
-/* Main ceremony heading */
-.opening-title {
-    margin: 0.1em 0 0;
+/* ======================================================
+   EVENT INFORMATION ANIMATIONS
+====================================================== */
+
+@keyframes event-information-reveal {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+@keyframes event-information-item-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes event-information-icon-glow {
+    0%,
+    100% {
+        filter:
+            drop-shadow(0 3px 5px rgba(199, 150, 45, 0.2));
+    }
+
+    50% {
+        filter:
+            drop-shadow(0 0 11px rgba(199, 150, 45, 0.42));
+    }
+}
+
+@keyframes event-information-separator-glow {
+    0%,
+    100% {
+        opacity: 0.65;
+        text-shadow:
+            0 0 0 rgba(199, 150, 45, 0);
+    }
+
+    50% {
+        opacity: 1;
+        text-shadow:
+            0 0 9px rgba(199, 150, 45, 0.42);
+    }
+}
+
+/* ======================================================
+   SECTION 4 : VENUE
+====================================================== */
+
+.venue-section{
+
+    position:absolute;
+
+    top:53%;
+
+    left:50%;
+
+    width:min(72%,760px);
+
+    transform:translateX(-50%);
+
+    text-align:center;
+
+    z-index:10;
+}
+
+.venue-ribbon{
+
+    width:220px;
+
+    margin:0 auto .8rem;
+}
+
+.venue-ribbon-image{
+
+    display:block;
+
+    width:100%;
+}
+
+.venue-title{
+
+    margin:0 0 .9rem;
+
+    color:#8b2e4b;
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:4rem;
+
+    font-weight:400;
+}
+
+.venue-panel{
+
+    padding:2rem;
+
+    background:rgba(255,255,255,.25);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:28px;
+
+    border:1px solid rgba(212,174,79,.35);
+
+    box-shadow:0 10px 28px rgba(0,0,0,.08);
+}
+
+.venue-icon{
+
+    width:44px;
+    height:44px;
+
+    color:#c7952f;
+
+    margin-bottom:.8rem;
+}
+
+.venue-name{
+
+    margin:.2rem 0;
+
+    color:#5b4036;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:2.3rem;
+}
+
+.venue-address{
+
+    margin:1rem 0 1.8rem;
+
+    color:#7a5550;
+
+    line-height:1.7;
+
+    font-size:1.1rem;
+}
+
+.venue-map-button{
+
+    display:inline-block;
+
+    padding:.9rem 2rem;
+
+    border-radius:50px;
+
+    background:#d1a437;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.25s;
+}
+
+.venue-map-button:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 18px rgba(0,0,0,.15);
+}
+
+
+/* Animation */
+
+@keyframes venue-reveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateX(-50%)
+            translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateX(-50%)
+            translateY(0);
+
+    }
+
+}
+
+/* ======================================================
+   SECTION 5: INVITATION MESSAGE
+====================================================== */
+
+.invitation-message {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+
+    width: min(76%, 860px);
+
+    text-align: center;
+
+    opacity: 0;
+    transform: translate(-50%, 22px);
+
+    z-index: 10;
+
+    animation:
+        invitation-message-reveal 1s ease-out 8.8s both;
+}
+
+.invitation-message-ribbon {
+    width: min(34%, 250px);
+    margin: 0 auto 0.6rem;
+}
+
+.invitation-message-ribbon-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.invitation-message-panel {
+    padding: 1.6rem 2.4rem;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 250, 248, 0.42),
+            rgba(255, 243, 240, 0.24)
+        );
+
+    border: 1px solid rgba(199, 150, 45, 0.38);
+    border-radius: 24px;
+
+    box-shadow:
+        0 10px 26px rgba(91, 64, 54, 0.08);
+
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+}
+
+.invitation-message-title {
+    margin: 0;
 
     color: #a93455;
 
     font-family: "Great Vibes", cursive;
-    font-size: clamp(3.5rem, 6vw, 7rem);
+    font-size: clamp(2.8rem, 4.2vw, 4.5rem);
     font-weight: 400;
-    line-height: 1.05;
-    text-align: center;
-
-    opacity: 1;
-    transform: translateY(0) scale(1);
-
-    animation:
-        opening-title-reveal 0.9s ease-out 2.3s both;
+    line-height: 1;
 }
 
+.invitation-message-text {
+    max-width: 680px;
+    margin: 0.65rem auto;
+
+    color: #6d3b34;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(1.15rem, 1.65vw, 1.65rem);
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.invitation-message-signature {
+    margin: 0.8rem 0 0;
+
+    color: #8b2e4b;
+
+    font-family: "Great Vibes", cursive;
+    font-size: clamp(1.9rem, 2.8vw, 2.8rem);
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+/* ======================================================
+   ANIMATION
+====================================================== */
+
+@keyframes invitation-message-reveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateX(-50%)
+            translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateX(-50%)
+            translateY(0);
+
+    }
+
+}
+/* ======================================================
+   SECTION 6: COUNTDOWN
+====================================================== */
+
+.countdown-section {
+    position: absolute;
+    top: 78%;
+    left: 50%;
+
+    width: min(80%, 960px);
+
+    text-align: center;
+
+    opacity: 0;
+    transform: translate(-50%, 22px);
+
+    z-index: 10;
+
+    animation:
+        countdown-section-reveal 1s ease-out 10s both;
+}
+
+.countdown-header {
+    margin-bottom: 0.8rem;
+}
+
+.countdown-kicker {
+    margin: 0;
+
+    color: #6d3b34;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(1rem, 1.45vw, 1.5rem);
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    line-height: 1.1;
+
+    text-transform: uppercase;
+}
+
+.countdown-title {
+    margin: 0.15rem 0 0;
+
+    color: #a93455;
+
+    font-family: "Great Vibes", cursive;
+    font-size: clamp(2.5rem, 4vw, 4.2rem);
+    font-weight: 400;
+    line-height: 1;
+}
+
+.countdown-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(0.55rem, 1.2vw, 1rem);
+
+    width: 100%;
+}
+
+.countdown-item {
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    min-height: clamp(90px, 9vw, 125px);
+    padding: 0.75rem 0.5rem;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 250, 248, 0.5),
+            rgba(255, 238, 235, 0.28)
+        );
+
+    border: 1px solid rgba(199, 150, 45, 0.44);
+    border-radius: 18px;
+
+    box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.24),
+        0 9px 22px rgba(91, 64, 54, 0.08);
+
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+
+    overflow: hidden;
+
+    animation:
+        countdown-item-float 5s ease-in-out infinite;
+}
+
+.countdown-item::before {
+    content: "";
+
+    position: absolute;
+    inset: 5px;
+
+    border: 1px solid rgba(199, 150, 45, 0.16);
+    border-radius: 13px;
+
+    pointer-events: none;
+}
+
+.countdown-value {
+    position: relative;
+
+    color: #8b2e4b;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2.6rem, 4.8vw, 5rem);
+    font-weight: 600;
+    line-height: 0.82;
+}
+
+.countdown-label {
+    position: relative;
+
+    margin-top: 0.35rem;
+
+    color: #c7962d;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(0.7rem, 1vw, 1rem);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1;
+
+    text-transform: uppercase;
+}
+
+.countdown-complete-message {
+    margin: 0.8rem 0 0;
+
+    color: #a93455;
+
+    font-family: "Great Vibes", cursive;
+    font-size: clamp(2rem, 3vw, 3rem);
+}
+
+/* ======================================================
+   COUNTDOWN ANIMATIONS
+====================================================== */
+
+@keyframes countdown-section-reveal {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+@keyframes countdown-item-float {
+    0%,
+    100% {
+        transform: translateY(0);
+        box-shadow:
+            inset 0 0 0 1px rgba(255, 255, 255, 0.28),
+            0 12px 28px rgba(91, 64, 54, 0.09);
+    }
+
+    50% {
+        transform: translateY(-7px);
+        box-shadow:
+            inset 0 0 0 1px rgba(255, 255, 255, 0.32),
+            0 16px 32px rgba(199, 150, 45, 0.14);
+    }
+}
+/* ======================================================
+   SECTION 7: THANK YOU
+====================================================== */
+
+.thank-you-section {
+    position: absolute;
+    top: 83%;
+    left: 50%;
+
+    width: min(64%, 680px);
+
+    text-align: center;
+
+    opacity: 0;
+    transform: translate(-50%, 20px);
+
+    z-index: 10;
+
+    animation:
+        thank-you-reveal 1s ease-out 11.2s both;
+}
+
+.thank-you-ribbon {
+    width: min(30%, 220px);
+    margin: 0 auto 0.45rem;
+}
+
+.thank-you-ribbon-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.thank-you-panel {
+    padding: 1.25rem 1.8rem;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 250, 248, 0.42),
+            rgba(255, 243, 240, 0.22)
+        );
+
+    border: 1px solid rgba(199, 150, 45, 0.38);
+    border-radius: 22px;
+
+    box-shadow:
+        0 9px 22px rgba(91, 64, 54, 0.07);
+
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+}
+
+.thank-you-title {
+    margin: 0;
+
+    color: #a93455;
+
+    font-family: "Great Vibes", cursive;
+    font-size: clamp(2.8rem, 4vw, 4.2rem);
+    font-weight: 400;
+    line-height: 1;
+}
+
+.thank-you-message {
+    margin: 0.55rem 0 0.75rem;
+
+    color: #6d3b34;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(1.05rem, 1.5vw, 1.45rem);
+    line-height: 1.35;
+}
+
+.thank-you-names {
+    margin: 0;
+
+    color: #8b2e4b;
+
+    font-family: "Great Vibes", cursive;
+    font-size: clamp(2.5rem, 3.8vw, 4rem);
+    font-weight: 400;
+    line-height: 1;
+}
+
+.thank-you-heart {
+    color: #c7962d;
+    padding: 0 0.25rem;
+
+    animation:
+        thank-you-heart-pulse 2.6s ease-in-out infinite;
+}
+
+
+/* ======================================================
+   THANK YOU ANIMATIONS
+====================================================== */
+
+@keyframes thank-you-reveal {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+@keyframes thank-you-heart-pulse {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+}
 
 
 /* ======================================================
@@ -276,6 +1182,134 @@ body {
         width: 82vw;
         max-width: none;
     }
+    /* ======================================================
+   MOBILE: EVENT INFORMATION
+====================================================== */
+
+.event-information {
+    top: 230vw;
+
+    width: 90%;
+}
+
+.event-information-ribbon {
+    width: 68%;
+    margin-bottom: 0.5rem;
+}
+
+.event-information-panel {
+    min-height: 120px;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        auto
+        minmax(0, 1fr)
+        auto
+        minmax(0, 1fr);
+
+    padding: 1rem 0.65rem;
+
+    border-radius: 18px;
+}
+
+.event-information-panel::before {
+    inset: 5px;
+    border-radius: 13px;
+}
+
+.event-information-icon {
+    width: clamp(25px, 7vw, 34px);
+    margin-bottom: 0.35rem;
+}
+
+.event-information-heading {
+    font-size: clamp(0.9rem, 3.8vw, 1.2rem);
+    letter-spacing: 0.02em;
+}
+
+.event-information-description {
+    font-size: clamp(0.72rem, 3.1vw, 1rem);
+}
+
+.event-information-separator {
+    width: clamp(18px, 5vw, 28px);
+    font-size: clamp(0.7rem, 3vw, 1rem);
+}
+.venue-section {
+
+    top: 255vw;
+
+    width: 88%;
+}
+
+.venue-panel {
+
+    padding: 1.4rem;
+}
+
+.venue-title {
+
+    font-size: 2.8rem;
+}
+
+.venue-name {
+
+    font-size: 1.8rem;
+}
+
+.venue-address {
+
+    font-size: 1.05rem;
+}
+
+.venue-map-button {
+
+    width: 100%;
+}
+/* Countdown section */
+.countdown-section {
+    top: 350vw;
+    width: 92%;
+}
+
+.countdown-header {
+    margin-bottom: 1rem;
+}
+
+.countdown-kicker {
+    font-size: clamp(1rem, 4vw, 1.3rem);
+}
+
+.countdown-title {
+    font-size: clamp(2.6rem, 10vw, 4rem);
+}
+
+.countdown-grid {
+    gap: 0.55rem;
+}
+
+.countdown-item {
+    min-height: 100px;
+    padding: 0.65rem 0.25rem;
+
+    border-radius: 16px;
+}
+
+.countdown-item::before {
+    inset: 4px;
+    border-radius: 11px;
+}
+
+.countdown-value {
+    font-size: clamp(2.2rem, 12vw, 3.8rem);
+}
+
+.countdown-label {
+    margin-top: 0.45rem;
+
+    font-size: clamp(0.58rem, 2.7vw, 0.8rem);
+    letter-spacing: 0.05em;
+}
 }
 
 /* ======================================================
@@ -292,7 +1326,13 @@ body {
     .opening-rings,
     .opening-rings-image,
     .couple-portrait,
-    .couple-portrait-image  {
+    .couple-portrait-image,
+    .event-information,
+    .event-information-item,
+    .event-information-icon,
+    .event-information-separator,
+    .countdown-section,
+    .countdown-item  {
         animation: none;
     }
 
@@ -322,224 +1362,21 @@ body {
     .couple-portrait-image {
         transform: none;
     }
-}
-
-/* ======================================================
-   DECORATIVE HEART RIBBON
-====================================================== */
-
-.opening-ribbon {
-    width: min(72%, 560px);
-    margin: 0.4rem auto 0;
-}
-
-.opening-ribbon-image {
-    display: block;
-    width: 100%;
-    height: auto;
-
-    opacity: 0;
-    transform: scaleX(0.75);
-
-    animation:
-    ribbon-reveal 0.7s ease-out 3s forwards;
-}
-
-
-/* ======================================================
-   COUPLE NAMES AND RINGS
-====================================================== */
-
-.opening-couple {
-    position: absolute;
-    top: 35%;
-    left: 50%;
-
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    column-gap: clamp(1rem, 3vw, 3rem);
-
-    width: min(86%, 1200px);
-
-    transform: translateX(-50%);
-    z-index: 10;
-}
-
-.opening-name {
-    margin: 0;
-
-    color: #a93455;
-
-    font-family: "Great Vibes", cursive;
-    font-size: clamp(4rem, 8vw, 8.5rem);
-    font-weight: 400;
-    line-height: 1;
-
-    opacity: 0;
-}
-
-.opening-name--groom {
-    text-align: right;
-    transform: translateX(-30px);
-
-    animation:
-    groom-name-reveal 0.9s ease-out 3.6s forwards;
-}
-
-.opening-name--bride {
-    text-align: left;
-    transform: translateX(30px);
-
-    animation:
-        bride-name-reveal 0.9s ease-out 3.6s forwards;
-}
-
-.opening-rings {
-    width: clamp(100px, 10vw, 170px);
-    margin: 0;
-
-    opacity: 0;
-
-    animation:
-    rings-reveal 0.8s ease-out 4.1s forwards;
-}
-
-.opening-rings-image {
-    display: block;
-    width: 100%;
-    height: auto;
-
-    transform-origin: center;
-
-    animation:
-    rings-float 4s ease-in-out 4.9s infinite;
-}
-
-
-/* ======================================================
-   RIBBON, NAMES AND RINGS ANIMATIONS
-====================================================== */
-
-@keyframes ribbon-reveal {
-    from {
-        opacity: 0;
-        transform: scaleX(0.75);
-    }
-
-    to {
+    .event-information {
         opacity: 1;
-        transform: scaleX(1);
+        transform: translate(-50%, 0);
     }
-}
-
-@keyframes groom-name-reveal {
-    from {
-        opacity: 0;
-        transform: translateX(-30px);
-    }
-
-    to {
+    
+    .event-information-item {
         opacity: 1;
-        transform: translateX(0);
+        transform: none;
     }
-}
-
-@keyframes bride-name-reveal {
-    from {
-        opacity: 0;
-        transform: translateX(30px);
-    }
-
-    to {
+    .countdown-section {
         opacity: 1;
-        transform: translateX(0);
+        transform: translate(-50%, 0);
     }
-}
-
-@keyframes rings-reveal {
-    from {
-        opacity: 0;
-        transform: translateY(14px) scale(0.92);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
-@keyframes rings-float {
-    0%,
-    100% {
-        transform: translateY(0) rotate(-1deg);
-    }
-
-    50% {
-        transform: translateY(-8px) rotate(1deg);
-    }
-}
-
-/* ======================================================
-   COUPLE PORTRAIT
-====================================================== */
-
-.couple-portrait {
-    position: absolute;
-    top: 43%;
-    left: 50%;
-
-    width: clamp(420px, 40vw, 760px);
-    margin: 0;
-
-    opacity: 0;
-    transform: translate(-50%, 28px) scale(0.96);
-
-    z-index: 10;
-
-    animation:
-        couple-portrait-reveal 1.2s ease-out 4.8s both;
-}
-
-.couple-portrait-image {
-    display: block;
-
-    width: 100%;
-    height: auto;
-
-    transform-origin: center bottom;
-
-    filter:
-        drop-shadow(0 16px 18px rgba(91, 64, 54, 0.16));
-
-    animation:
-        couple-portrait-float 5s ease-in-out 6s infinite;
-}
-
-
-/* ======================================================
-   COUPLE PORTRAIT ANIMATIONS
-====================================================== */
-
-@keyframes couple-portrait-reveal {
-    from {
-        opacity: 0;
-        transform: translate(-50%, 28px) scale(0.96);
-    }
-
-    to {
-        opacity: 1;
-        transform: translate(-50%, 0) scale(1);
-    }
-}
-
-@keyframes couple-portrait-float {
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-10px);
+    
+    .countdown-item {
+        transform: none;
     }
 }
