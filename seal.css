@@ -749,6 +749,18 @@ body.invitation-locked {
         envelope-disappear 0.8s ease 1.6s forwards;
 }
 
+.tap-wrapper {
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+.tap-wrapper.is-hidden {
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+}
+
 
 /* ======================================================
    ANIMATIONS

@@ -91,6 +91,13 @@ function openInvitation() {
     invitationOpened = true;
     waxSeal.disabled = true;
 
+    const tapWrapper =
+    document.querySelector(".tap-wrapper");
+
+if (tapWrapper) {
+    tapWrapper.classList.add("is-hidden");
+}
+
     waxSeal.setAttribute(
         "aria-expanded",
         "true"
