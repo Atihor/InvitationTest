@@ -9,7 +9,7 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Nilesh &amp; Radhika | Engagement Invitation</title>
+    <title>Nilesh &amp; Radhika | ConverPage</title>
 
     <!-- Improve Google Fonts connection performance -->
     <link
@@ -23,20 +23,135 @@
         crossorigin
     >
 
-    <!-- Invitation fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Great+Vibes&family=Noto+Serif+Devanagari:wght@500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@500;600&family=Cormorant+Garamond:wght@500;600&family=Noto+Serif+Devanagari:wght@500;600&display=swap"
         rel="stylesheet"
     >
-
     <!-- Main stylesheet -->
     <link
         rel="stylesheet"
-        href="styles.css"
+        href="seal.css"
     >
 </head>
 
 <body>
+     <!-- ======================================================
+         OPENING SEAL SCREEN
+    ======================================================= -->
+    <section
+        class="seal-screen"
+        id="seal-screen"
+        aria-label="Open engagement invitation"
+    >
+        <!-- Background -->
+        <img
+            class="seal-screen-background"
+            src="assets/seal-background.png"
+            alt=""
+            aria-hidden="true"
+        >
+
+        <!-- Falling petals -->
+        <div
+            class="seal-petal-layer"
+            id="seal-petal-layer"
+            aria-hidden="true"
+        ></div>
+
+        <!-- Main opening content -->
+        <div class="seal-content">
+
+            <p class="seal-introduction">
+                TOGETHER WITH OUR FAMILIES
+            </p>
+        
+            <h1 class="seal-couple-names">
+                Nilesh
+                <span class="seal-name-divider">&amp;</span>
+                Radhika
+            </h1>
+        
+            <div class="seal-divider"></div>
+        
+            <div class="envelope-wrapper" id="envelope-wrapper">
+        
+                <div class="gold-sparkles"></div>
+        
+                <div class="envelope">
+        
+                    <div class="envelope-back"></div>
+        
+                    <div class="envelope-card">
+
+                        <p class="envelope-card-invocation">
+                            श्री गणेशाय नमः
+                        </p>
+                    
+                        <h2 class="envelope-card-names">
+                            Nilesh
+                            <span>&amp;</span>
+                            Radhika
+                        </h2>
+                    
+                        <div class="envelope-card-divider"></div>
+                    
+                        <p class="envelope-card-event">
+                            Engagement Ceremony
+                        </p>
+                    
+                        <p class="envelope-card-date">
+                            30 August 2026
+                        </p>
+                    
+                    </div>
+        
+                    <div class="envelope-flap"></div>
+        
+                    <div class="envelope-front-left"></div>
+        
+                    <div class="envelope-front-right"></div>
+        
+                    <div class="envelope-front-bottom"></div>
+        
+                    <button
+                        class="wax-seal"
+                        id="wax-seal"
+                        type="button">
+        
+                        <span class="wax-seal-piece wax-seal-piece--left"></span>
+        
+                        <span class="wax-seal-piece wax-seal-piece--right"></span>
+        
+                        <span class="wax-seal-inner">
+        
+                            <img
+                                src="assets/ganesha-seal-premium.svg"
+                                class="wax-seal-ganesha"
+                                alt=""
+                            >
+        
+                        </span>
+        
+                    </button>
+        
+                </div>
+        
+            </div>
+        
+            <div class="tap-wrapper">
+        
+                <span class="tap-text">
+                    TAP THE SEAL
+                </span>
+        
+                <span class="tap-subtext">
+                    TO OPEN
+                </span>
+        
+            </div>
+        
+        </div>
+    </section>
 
     <!-- ======================================================
         FALLING PETALS
@@ -47,546 +162,10 @@
     id="petal-layer"
     aria-hidden="true"
     ></div>
-    <!-- ======================================================
-         INVITATION PAGE
-         The background image controls the page dimensions.
-    ======================================================= -->
-    <main class="invitation-page">
 
-        <!-- Invitation background -->
-        <img
-            class="invitation-background"
-            src="assets/background.png"
-            alt="Floral engagement invitation background"
-        >
-
-        <!-- Animated Ganpati -->
-        <figure class="opening-ganpati">
-            <img
-                class="opening-ganpati-image"
-                src="assets/ganpati.png"
-                alt="Lord Ganpati"
-            >
-        </figure>
-
-        <!-- Traditional Marathi invocation -->
-        <p
-            class="opening-invocation"
-            lang="mr"
-        >
-            ॥ श्री गणेशाय नमः ॥
-        </p>
-
-        <!-- Invitation introduction -->
-        <header class="opening-header">
-
-            <p class="opening-invitation-text">
-                We cordially invite you to the
-            </p>
-
-            <h1 class="opening-title">
-                Engagement Ceremony of
-            </h1>            
-
-        </header>
-        <!-- Decorative heart ribbon -->
-        <figure class="opening-ribbon">
-            <img
-                class="opening-ribbon-image"
-                src="assets/ribbon.png"
-                alt=""
-                aria-hidden="true"
-            >
-        </figure>
-
-        <!-- Couple names and engagement rings -->
-        <div class="opening-couple">
-
-            <p class="opening-name opening-name--groom">
-                Nilesh
-            </p>
-
-            <figure class="opening-rings">
-                <img
-                    class="opening-rings-image"
-                    src="assets/rings.png"
-                    alt="Two golden engagement rings"
-                >
-            </figure>
-
-            <p class="opening-name opening-name--bride">
-                Radhika
-            </p>
-
-        </div>
-        <!-- ======================================================
-            COUPLE PORTRAIT
-            Transparent couple cutout positioned over the invitation.
-        ======================================================= -->
-        <figure class="couple-portrait">
-            <img
-                class="couple-portrait-image"
-                src="assets/couple.png"
-                alt="Nilesh and Radhika"
-            >
-        </figure>
-
-        <!-- ======================================================
-     SECTION 4 : EVENT INFORMATION
-====================================================== -->
-
-<section
-class="event-information"
-id="event-information"
->
-
-<!-- Decorative Top Divider -->
-<figure class="event-information-ribbon">
-
-    <img
-        class="event-information-ribbon-image"
-        src="assets/ribbon.png"
-        alt=""
-        aria-hidden="true"
-    >
-
-</figure>
-
-<!-- Information Panel -->
-
-<div class="event-information-panel">
-
-    <!-- Date -->
-
-    <article class="event-information-item">
-
-        <svg
-            class="event-information-icon"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-        >
-            <rect
-                x="3"
-                y="5"
-                width="18"
-                height="16"
-                rx="2"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.7"
-            />
-
-            <line
-                x1="3"
-                y1="9"
-                x2="21"
-                y2="9"
-                stroke="currentColor"
-                stroke-width="1.7"
-            />
-
-            <line
-                x1="8"
-                y1="3"
-                x2="8"
-                y2="7"
-                stroke="currentColor"
-                stroke-width="1.7"
-            />
-
-            <line
-                x1="16"
-                y1="3"
-                x2="16"
-                y2="7"
-                stroke="currentColor"
-                stroke-width="1.7"
-            />
-        </svg>
-
-        <h3 class="event-information-heading">
-            Sunday
-        </h3>
-
-        <p class="event-information-description">
-            30 August 2026
-        </p>
-
-    </article>
-
-    <!-- Divider -->
-
-    <span
-        class="event-information-separator"
-        aria-hidden="true"
-    >
-        ✦
-    </span>
-
-    <!-- Time -->
-
-    <article class="event-information-item">
-
-        <svg
-            class="event-information-icon"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-        >
-            <circle
-                cx="12"
-                cy="12"
-                r="9"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.7"
-            />
-
-            <path
-                d="M12 7v5l3 2"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.7"
-                stroke-linecap="round"
-            />
-        </svg>
-
-        <h3 class="event-information-heading">
-            1:30 PM
-        </h3>
-
-        <p class="event-information-description">
-            Onwards
-        </p>
-
-    </article>
-
-    <!-- Divider -->
-
-    <span
-        class="event-information-separator"
-        aria-hidden="true"
-    >
-        ✦
-    </span>
-
-    <!-- Location -->
-
-    <article class="event-information-item">
-
-        <svg
-            class="event-information-icon"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-        >
-            <path
-                d="M12 21s7-6.2 7-12
-                   a7 7 0 1 0-14 0
-                   c0 5.8 7 12 7 12z"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.7"
-            />
-
-            <circle
-                cx="12"
-                cy="9"
-                r="2.5"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.7"
-            />
-        </svg>
-
-        <h3 class="event-information-heading">
-            Nagpur
-        </h3>
-
-        <p class="event-information-description">
-            Maharashtra
-        </p>
-
-    </article>
-
-</div>
-
-</section>
-<!-- ======================================================
-     SECTION 5 : VENUE
-====================================================== -->
-
-<section
-    class="venue-section"
-    id="venue"
->
-
-    <!-- Decorative Ribbon -->
-
-    <figure class="venue-ribbon">
-
-        <img
-            class="venue-ribbon-image"
-            src="assets/ribbon.png"
-            alt=""
-            aria-hidden="true"
-        >
-
-    </figure>
-
-    <!-- Heading -->
-
-    <header class="venue-header">
-
-        <h2 class="venue-title">
-            Venue
-        </h2>
-
-    </header>
-
-    <!-- Venue Panel -->
-
-    <div class="venue-panel">
-
-        <!-- Location Icon -->
-
-        <svg
-            class="venue-icon"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-        >
-            <path
-                d="M12 21s7-6.2 7-12
-                   a7 7 0 1 0-14 0
-                   c0 5.8 7 12 7 12z"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-            />
-
-            <circle
-                cx="12"
-                cy="9"
-                r="2.5"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-            />
-        </svg>
-
-        <h3 class="venue-name">
-            Royal Palace Lawn
-        </h3>
-
-        <p class="venue-address">
-            Near Futala Lake<br>
-            Civil Lines<br>
-            Nagpur, Maharashtra
-        </p>
-
-        <a
-            class="venue-map-button"
-            href="https://maps.google.com"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-        <span aria-hidden="true">⌖</span>
-        View on Google Maps
-        </a>
-
-    </div>
-
-</section>
-<!-- ======================================================
-     SECTION 6 : INVITATION MESSAGE
-====================================================== -->
-
-<section
-    class="invitation-message"
-    id="invitation-message"
->
-
-    <!-- Decorative Ribbon -->
-    <figure class="invitation-message-ribbon">
-
-        <img
-            class="invitation-message-ribbon-image"
-            src="assets/ribbon.png"
-            alt=""
-            aria-hidden="true"
-        >
-
-    </figure>
-
-    <!-- Message Panel -->
-    <div class="invitation-message-panel">
-
-        <h2 class="invitation-message-title">
-            You're Invited
-        </h2>
-
-        <p class="invitation-message-text">
-            With the blessings of our beloved families,
-            we joyfully invite you to celebrate
-            the beginning of our forever.
-        </p>
-
-        <p class="invitation-message-text">
-            Your gracious presence and heartfelt blessings
-            will make this joyous occasion
-            truly unforgettable.
-        </p>
-
-        <p class="invitation-message-signature">
-            We look forward to celebrating with you.
-        </p>
-
-    </div>
-
-</section>
-<!-- ======================================================
-     SECTION 7: COUNTDOWN
-     Live countdown to the engagement ceremony.
-======================================================= -->
-<section
-    class="countdown-section"
-    id="countdown"
-    aria-labelledby="countdown-title"
->
-
-    <!-- Countdown heading -->
-    <header class="countdown-header">
-        <p class="countdown-kicker">
-            Counting Down To
-        </p>
-
-        <h2
-            class="countdown-title"
-            id="countdown-title"
-        >
-            Our Engagement
-        </h2>
-    </header>
-
-    <!-- Live countdown values -->
-    <div
-        class="countdown-grid"
-        role="timer"
-        aria-live="polite"
-        aria-atomic="true"
-    >
-
-        <!-- Days -->
-        <div class="countdown-item">
-            <span
-                class="countdown-value"
-                id="countdown-days"
-            >
-                00
-            </span>
-
-            <span class="countdown-label">
-                Days
-            </span>
-        </div>
-
-        <!-- Hours -->
-        <div class="countdown-item">
-            <span
-                class="countdown-value"
-                id="countdown-hours"
-            >
-                00
-            </span>
-
-            <span class="countdown-label">
-                Hours
-            </span>
-        </div>
-
-        <!-- Minutes -->
-        <div class="countdown-item">
-            <span
-                class="countdown-value"
-                id="countdown-minutes"
-            >
-                00
-            </span>
-
-            <span class="countdown-label">
-                Minutes
-            </span>
-        </div>
-
-        <!-- Seconds -->
-        <div class="countdown-item">
-            <span
-                class="countdown-value"
-                id="countdown-seconds"
-            >
-                00
-            </span>
-
-            <span class="countdown-label">
-                Seconds
-            </span>
-        </div>
-
-    </div>
-
-    <!-- Message displayed after countdown completion -->
-    <p
-        class="countdown-complete-message"
-        id="countdown-complete-message"
-        hidden
-    >
-        The celebration has begun!
-    </p>
-
-</section>
-<!-- ======================================================
-     SECTION 8 : THANK YOU
-====================================================== -->
-
-
-</figure>
-<section
-    class="thank-you-section"
-    id="thank-you"
->   <figure class="thank-you-ribbon">
-    <img
-        class="thank-you-ribbon-image"
-        src="assets/ribbon.png"
-        alt=""
-        aria-hidden="true"
-    >
-    </figure>
-
-    
-
-    <div class="thank-you-panel">
-
-        <h2 class="thank-you-title">
-            Thank You
-        </h2>
-
-        <p class="thank-you-message">
-            We look forward to celebrating
-            this beautiful day with you.
-        </p>
-
-        <h3 class="thank-you-names">
-            Nilesh
-            <span class="thank-you-heart">❤</span>
-            Radhika
-        </h3>
-
-    </div>
-
-</section>
-
-    </main>
 
     <!-- Main JavaScript -->
-    <script src="script.js"></script>
+    <script src="seal.js"></script>
 
 </body>
 

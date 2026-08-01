@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <filter id="emboss" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="1.4" stdDeviation="0.9" flood-color="#5b1730" flood-opacity="0.55"/>
+      <feDropShadow dx="0" dy="-0.6" stdDeviation="0.45" flood-color="#fff3c4" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <g stroke="#efcf7c" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#emboss)">
+    <circle cx="60" cy="60" r="52" stroke-width="2.8"/>
+    <circle cx="60" cy="60" r="46" stroke-width="1.2" opacity="0.78"/>
+
+    <path d="M54 19 C49 15 50 10 55 10 C60 10 62 15 59 18 C56 21 51 22 49 26 C47 30 51 34 56 32 C61 30 64 24 63 18" stroke-width="2.2"/>
+    <path d="M65 13 C69 13 71 16 70 19" stroke-width="2"/>
+    <circle cx="69.5" cy="10.5" r="1.5" fill="#efcf7c" stroke="none"/>
+
+    <path d="M24 54 C17 50 16 43 21 39 C26 35 31 39 29 44" stroke-width="1.8"/>
+    <path d="M21 51 C16 55 17 62 23 64" stroke-width="1.8"/>
+    <path d="M96 54 C103 50 104 43 99 39 C94 35 89 39 91 44" stroke-width="1.8"/>
+    <path d="M99 51 C104 55 103 62 97 64" stroke-width="1.8"/>
+
+    <path d="M48 35 L54 28 L60 34 L66 28 L72 35" stroke-width="2.5"/>
+    <path d="M45 48 C45 37 51 33 60 33 C69 33 75 37 75 48 C75 56 71 62 66 66" stroke-width="3"/>
+    <path d="M46 43 C36 43 31 51 35 59 C38 65 44 64 47 60" stroke-width="2.7"/>
+    <path d="M74 43 C84 43 89 51 85 59 C82 65 76 64 73 60" stroke-width="2.7"/>
+
+    <path d="M50 47 Q54 44 57 47" stroke-width="2"/>
+    <path d="M63 47 Q66 44 70 47" stroke-width="2"/>
+
+    <path d="M50 56 L44 60" stroke-width="2.2"/>
+    <path d="M70 56 L76 60" stroke-width="2.2"/>
+
+    <path d="M60 47 C67 56 66 67 58 72 C52 76 53 84 61 88 C68 91 75 86 72 79" stroke-width="3.2"/>
+    <path d="M48 66 C39 70 37 81 45 87" stroke-width="2.5"/>
+    <path d="M70 66 C79 70 81 81 73 87" stroke-width="2.5"/>
+
+    <path d="M43 94 Q60 84 77 94" stroke-width="2.5"/>
+    <path d="M36 94 Q60 105 84 94" stroke-width="2.3"/>
+
+    <circle cx="48" cy="101" r="1.4" fill="#efcf7c" stroke="none"/>
+    <circle cx="60" cy="103" r="1.4" fill="#efcf7c" stroke="none"/>
+    <circle cx="72" cy="101" r="1.4" fill="#efcf7c" stroke="none"/>
+  </g>
+</svg>
