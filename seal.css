@@ -16,8 +16,11 @@ body {
 }
 
 body {
-    overflow: hidden;
     background: #f8e5df;
+}
+
+body.invitation-locked {
+    overflow: hidden;
 }
 
 
@@ -666,10 +669,11 @@ body {
 
     gap: 0.35rem;
     margin-top: 1.6rem;
+    transform: translateY(-7cqw);
 }
 
 .tap-text {
-    color: #d6a83e;
+    color: #cd256e;
 
     font-family: "Cinzel", serif;
     font-size: clamp(0.9rem, 2.8vw, 1.25rem);
@@ -984,5 +988,81 @@ body {
     .tap-text,
     .tap-subtext {
         animation: none;
+    }
+}
+
+/* ======================================================
+   INVITATION VISIBILITY
+====================================================== */
+
+.invitation-page--hidden {
+    display: none;
+}
+
+.invitation-page--visible {
+    display: block;
+
+    animation:
+        invitation-page-reveal
+        1s
+        ease-out
+        both;
+}
+
+@keyframes invitation-page-reveal {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ======================================================
+   PAGE TRANSITION
+====================================================== */
+
+body.invitation-locked {
+    overflow: hidden;
+}
+
+.invitation-page--hidden {
+    display: none !important;
+}
+
+.invitation-page--visible {
+    display: block !important;
+    opacity: 1;
+
+    animation:
+        invitation-page-reveal
+        1s
+        ease-out
+        both;
+}
+
+.seal-screen {
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+        opacity 0.8s ease,
+        visibility 0.8s ease;
+}
+
+.seal-screen.is-closing {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+@keyframes invitation-page-reveal {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }

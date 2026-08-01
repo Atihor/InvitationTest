@@ -462,7 +462,7 @@ p {
     left: 50%;
     z-index: 10;
 
-    width: 54cqw;
+    width: 58cqw;
     margin: 0;
 
     opacity: 0;
@@ -1065,7 +1065,8 @@ p {
 /* Countdown heading */
 
 .countdown-header {
-    margin-bottom: 0.8cqw;
+    margin-bottom: 0.8cqw;    
+    padding-bottom: 2cqw;
 }
 
 .countdown-kicker {
@@ -1103,6 +1104,7 @@ p {
 /* Countdown cards */
 
 .countdown-grid {
+    
     display: grid;
     grid-template-columns:
         repeat(4, minmax(0, 1fr));
@@ -1268,6 +1270,7 @@ p {
     width: 34cqw;
     margin: 0 auto 0.8cqw;
     padding-bottom: 4cqw;
+    padding-top: 3cqw;
 }
 .thank-you-ribbon-image {
     display: block;
