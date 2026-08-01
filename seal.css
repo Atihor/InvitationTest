@@ -12,6 +12,7 @@ html,
 body{
     width:100%;
     height:100%;
+    padding-top:env(safe-area-inset-top);
 }
 
 body{
@@ -39,6 +40,9 @@ body{
     overflow:hidden;
 
     background:#f8e5df;
+    padding-top:
+    max(3rem, env(safe-area-inset-top));
+
 }
 
 
@@ -85,6 +89,11 @@ body{
     align-items:center;
 
     justify-content:center;
+    width:min(92%,420px);
+
+    margin:auto;
+    gap:1.6rem;
+
 }
 
 /* ======================================================
@@ -95,7 +104,7 @@ body{
 
     position:relative;
 
-    width:min(78vw,440px);
+    width:min(72vw,360px);
 
     aspect-ratio:1.5/1;
 
@@ -120,6 +129,15 @@ body{
         0 2px 5px rgba(255,255,255,.55);
 
     margin-bottom:.8rem;
+    width:min(90%,320px);
+
+    margin:0 auto 1rem;
+
+    text-align:center;
+
+    line-height:1.5;
+
+    letter-spacing:.18em;
 }
 
 .seal-couple-names{
@@ -221,33 +239,44 @@ body{
    INVITATION CARD
 ====================================================== */
 
-.envelope-card{
+.envelope-card {
+    position: absolute;
 
-    position:absolute;
+    left: 8%;
+    top: 8%;
 
-    left:8%;
-    top:8%;
+    width: 84%;
+    height: 82%;
 
-    width:84%;
-    height:82%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+    padding:
+        clamp(2.2rem, 8vw, 3.4rem)
+        clamp(1rem, 4vw, 1.6rem)
+        clamp(1.2rem, 5vw, 2rem);
+
+    text-align: center;
 
     background:
         linear-gradient(
             145deg,
-            #fffefb,
-            #fdf2eb
+            #fffdf9,
+            #faeee7
         );
 
-    border:1px solid rgba(199,154,46,.45);
+    border: 1px solid rgba(199, 154, 46, 0.45);
+    border-radius: 8px;
 
-    border-radius:8px;
+    box-shadow:
+        inset 0 0 0 3px
+        rgba(255, 255, 255, 0.35);
 
-    z-index:2;
+    overflow: hidden;
+
+    z-index: 2;
 }
 
 .envelope-card-monogram{
@@ -893,7 +922,6 @@ body{
 }
 .tap-wrapper{
 
-    margin-top:2.5rem;
 
     display:flex;
 
@@ -902,6 +930,7 @@ body{
     align-items:center;
 
     gap:.4rem;
+    margin-top:2.8rem;
 }
 
 .tap-text{
@@ -1112,4 +1141,45 @@ body{
     font-weight: 600;
     letter-spacing: 0.12em;
     text-transform: uppercase;
+}
+.seal-couple-names{
+    font-size: clamp(3.2rem, 14vw, 5.2rem);
+    line-height: .92;
+}
+
+@media (max-width: 600px) {
+    .envelope-card {
+        padding:
+            1.45rem
+            0.9rem
+            0.8rem;
+    }
+
+    .envelope-card-invocation {
+        font-size: 0.68rem;
+    }
+
+    .envelope-card-names {
+        font-size: 1.65rem;
+    }
+
+    .envelope-card-event {
+        font-size: 0.72rem;
+    }
+
+    .envelope-card-date {
+        font-size: 0.55rem;
+    }
+}
+
+/* Temporary test */
+.envelope-wrapper .envelope-card {
+    justify-content: flex-start !important;
+    padding: 2rem 1.4rem 1.2rem !important;
+}
+
+@media (max-width: 600px) {
+    .envelope-wrapper .envelope-card {
+        padding: 1.35rem 0.85rem 0.75rem !important;
+    }
 }
